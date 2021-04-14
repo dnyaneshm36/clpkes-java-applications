@@ -1,0 +1,21 @@
+type a
+q 444088857253600392332231
+h 3307912202765256
+r 134250497
+exp2 27
+exp1 15
+sign1 1
+sign0 1
+
+mvn deploy:deploy-file  -Dfile=/home/dm/NetBeansProjects/ClpkesClient/src/libs/jpbc-api-2.0.0.jar \
+-DgroupId=it.unisa.dia.gas -DartifactId=jpbc-api -Dversion=2.0.0  -Durl=file:./libs -DrepositoryId=libs \
+-DupdateReleaseInfo=true  
+
+
+mvn install:install-file \
+   -Dfile=/home/dm/NetBeansProjects/ClpkesClient/jpbc-api-2.0.0.jar \
+   -DgroupId=jpbc \
+   -DartifactId=api \
+   -Dversion=2.0.0 \
+   -Dpackaging=jar \
+   -DgeneratePom=true
